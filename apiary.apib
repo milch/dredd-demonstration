@@ -1,0 +1,36 @@
+FORMAT: 1A
+HOST: http://localhost:8683
+
+# Empress Beauty
+
+# Group User
+
+## Logged in User [/users/me]
+
+### Change the profile picture [POST /users/me/profile_pic]
+
++ Request (multipart/form-data;boundary=------------nx-oauth2101027544)
+    + Header
+    
+            Authorization: Bearer $myToken
+    + Body
+            
+            --------------nx-oauth2101027544
+            Content-Disposition: form-data; name="file"; filename="users/me/profile_pic"
+            Content-Transfer-Encoding: binary
+            Content-Type: image/jpeg
+
+            data
+            --------------nx-oauth2101027544--
+
++ Response 201 (application/json; charset=utf-8)
+    + Body
+                
+        ```
+            [true]
+        ```
+
+
+<!---
+vim: ft=markdown
+-->
